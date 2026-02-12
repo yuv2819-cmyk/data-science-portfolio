@@ -2,7 +2,7 @@
 
 > **Author**: Yuvraj  
 > **Role**: Data Scientist  
-> **Contact**: [Add your LinkedIn] | [Add your GitHub] | [Add your Email]
+> **Contact**: [www.linkedin.com/in/yuv2819] | [https://github.com/yuv2819-cmyk] | [Yuv2819@gmail.com
 
 ---
 
