@@ -1,193 +1,41 @@
-# 📊 Data Science Portfolio
+# Data Science Portfolio
 
-> **Author**: Yuvraj  
-> **Role**: Data Scientist  
-> **Contact**: [www.linkedin.com/in/yuv2819] | [https://github.com/yuv2819-cmyk] | [Yuv2819@gmail.com
+Five end-to-end projects on synthetic data: classification, regression, NLP, clustering, and forecasting.
 
----
+Built to show the full loop — problem, EDA, models, interpretation, business takeaway — not just a leaderboard score.
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange.svg)](https://jupyter.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+**Author:** Yuvraj · [LinkedIn](https://www.linkedin.com/in/yuv2819) · [GitHub](https://github.com/yuv2819-cmyk) · [yuv2819@gmail.com](mailto:yuv2819@gmail.com)
 
-Welcome to my data science portfolio! This repository contains 5 industry-ready projects demonstrating various machine learning techniques and business applications.
+All datasets here are synthetic. Metrics describe the demo, not a production client.
 
-> **⚡ Quick Start**: Jump to [Getting Started Guide](./GETTING_STARTED.md) | View [Project 1 (Fully Implemented)](./customer-churn-prediction/)
+## Projects
 
----
+| Project | Type | Best result on this data | Takeaway |
+|---|---|---|---|
+| [Customer churn](./customer-churn-prediction/) | Classification · telecom | XGBoost, 88% ROC-AUC | Month-to-month contracts churn ~3× more |
+| [House prices](./real-estate-price-prediction/) | Regression | Stacking ensemble, R² 0.88 | Square footage explains ~40% of price |
+| [Review sentiment](./sentiment-analysis/) | NLP | LSTM, 92% accuracy | Most negative reviews name a specific defect |
+| [Customer segments](./customer-segmentation/) | Clustering · RFM | K-Means, 5 groups | ~12% “VIP” drives ~45% of revenue |
+| [Sales forecast](./sales-forecasting/) | Time series | Prophet, 6.2% MAPE | Holiday seasonality on a 35% YoY trend |
 
-## 🎯 Projects Overview
+Churn project also includes SMOTE, SHAP, and a simple ROI sketch.
 
-### 1. Customer Churn Prediction
-**Type**: Binary Classification | **Domain**: Telecommunications
+## Stack used across the set
 
-Predicts customer churn using multiple ML algorithms (Logistic Regression, Random Forest, XGBoost). Includes SMOTE for class imbalance, SHAP for interpretability, and ROI analysis.
+`Python` `pandas` `scikit-learn` `XGBoost` `TensorFlow/Keras` `NLTK` `Prophet` `SHAP` `matplotlib` `seaborn`
 
-- **Best Model**: XGBoost (88% ROC-AUC)
-- **Key Finding**: Month-to-month contracts have 3x higher churn rate
-- **Business Impact**: $250K net benefit through targeted retention
+## Run a project
 
-[📁 View Project](./customer-churn-prediction/)
-
----
-
-### 2. Real Estate Price Prediction
-**Type**: Regression | **Domain**: Real Estate
-
-Predicts house prices using property features and location data. Implements ensemble methods and stacking for optimal performance.
-
-- **Best Model**: Stacking Ensemble (R² = 0.88)
-- **Key Finding**: Square footage explains 40% of price variation
-- **Use Case**: Automated property valuation for buyers/sellers
-
-[📁 View Project](./real-estate-price-prediction/)
-
----
-
-### 3. Product Review Sentiment Analysis
-**Type**: NLP Classification | **Domain**: E-commerce
-
-Analyzes customer sentiment from product reviews using both traditional ML (TF-IDF) and deep learning (LSTM) approaches.
-
-- **Best Model**: LSTM (92% accuracy)
-- **Key Finding**: 85% of negative reviews mention specific product defects
-- **Use Case**: Automated review monitoring and quality insights
-
-[📁 View Project](./sentiment-analysis/)
-
----
-
-### 4. Customer Segmentation
-**Type**: Unsupervised Learning | **Domain**: Retail
-
-Segments customers using clustering algorithms (K-Means, Hierarchical, DBSCAN) with RFM analysis for targeted marketing.
-
-- **Best Method**: K-Means with 5 clusters
-- **Key Finding**: "VIP" segment (12%) generates 45% of revenue
-- **Use Case**: Personalized marketing campaigns
-
-[📁 View Project](./customer-segmentation/)
-
----
-
-### 5. Sales Forecasting
-**Type**: Time Series | **Domain**: Retail
-
-Forecasts sales using traditional (ARIMA, SARIMA) and modern (Prophet, LSTM) time series methods.
-
-- **Best Model**: Prophet (MAPE = 6.2%)
-- **Key Finding**: 35% YoY growth with strong holiday seasonality
-- **Use Case**: Inventory optimization and demand planning
-
-[📁 View Project](./sales-forecasting/)
-
----
-
-## 🛠️ Technical Skills Demonstrated
-
-- **Languages**: Python
-- **Data Analysis**: Pandas, NumPy, Statistical Analysis
-- **Visualization**: Matplotlib, Seaborn, Plotly
-- **Machine Learning**: Scikit-learn, XGBoost, LightGBM
-- **Deep Learning**: TensorFlow/Keras, LSTM Networks
-- **NLP**: NLTK, SpaCy, TF-IDF, Word Embeddings
-- **Time Series**: Statsmodels, Prophet, ARIMA/SARIMA
-- **Model Interpretation**: SHAP, Feature Importance
-- **Techniques**: Cross-validation, Hyperparameter tuning, Ensemble methods, Class imbalance handling
-
-## 📈 Business Skills
-
-- ROI and cost-benefit analysis
-- A/B testing and experimental design
-- Stakeholder communication
-- Strategic recommendations
-- KPI definition and tracking
-
-## 🎓 Project Methodology
-
-Each project follows industry best practices:
-
-1. **Business Understanding**: Clear problem definition and success metrics
-2. **Data Exploration**: Comprehensive EDA with visualizations
-3. **Data Preparation**: Feature engineering and preprocessing
-4. **Modeling**: Multiple algorithms with rigorous evaluation
-5. **Evaluation**: Business-focused metrics and interpretation
-6. **Deployment Considerations**: Production-ready code and documentation
-
-## 📁 Repository Structure
-
-```
-portfolio/
-├── customer-churn-prediction/
-├── real-estate-price-prediction/
-├── sentiment-analysis/
-├── customer-segmentation/
-└── sales-forecasting/
-```
-
-Each project contains:
-- `notebooks/` - Jupyter notebooks with analysis
-- `data/` - Raw and processed datasets
-- `models/` - Trained model files
-- `visualizations/` - Generated plots and charts
-- `README.md` - Project documentation
-- `requirements.txt` - Dependencies
-
-## 🚀 Getting Started
-
-### Prerequisites
 ```bash
-Python 3.9 or higher
-```
-
-### Installation
-```bash
-# Clone the repository
-cd <project-folder>
-
-# Install dependencies
+cd customer-churn-prediction
 pip install -r requirements.txt
-
-# Launch Jupyter
 jupyter notebook
 ```
 
-### Running Projects
-Each project can be run independently by executing the notebooks in numerical order (01, 02, 03).
+Notebooks are numbered `01`, `02`, `03` inside each folder.
 
-## 📊 Results Summary
+## More
 
-| Project | Model Type | Best Performance | Business Value |
-|---------|-----------|------------------|----------------|
-| Churn Prediction | XGBoost | 88% ROC-AUC | $250K savings |
-| House Prices | Stacking | R² = 0.88 | ±$22K accuracy |
-| Sentiment Analysis | LSTM | 92% accuracy | Real-time monitoring |
-| Customer Segments | K-Means | 5 segments | 3x campaign ROI |
-| Sales Forecasting | Prophet | 6.2% MAPE | Optimized inventory |
-
-## 💡 Key Insights Across Projects
-
-1. **Feature Engineering**: Drives 10-20% performance improvement
-2. **Ensemble Methods**: Consistently outperform single models
-3. **Domain Knowledge**: Essential for meaningful feature creation
-4. **Business Context**: Metrics must align with business objectives
-5. **Interpretability**: Critical for stakeholder trust and adoption
-
-## 📬 Contact
-
-Feel free to explore the projects and reach out with any questions!
-
----
-
-## 📚 Additional Resources
-
-- **[Getting Started Guide](./GETTING_STARTED.md)** - How to run and explore projects
-- **[Setup & Deployment](./SETUP_AND_DEPLOYMENT.md)** - Git setup, deployment options, demo script
-- **[Interview Prep](./INTERVIEW_PREP.md)** - Complete checklist and Q&A preparation
-
----
-
-**Note**: All projects use synthetic data generated to demonstrate analytical capabilities and real-world business scenarios.
-
----
-*Last Updated: February 2026*
+- [GETTING_STARTED.md](./GETTING_STARTED.md)
+- [SETUP_AND_DEPLOYMENT.md](./SETUP_AND_DEPLOYMENT.md)
+- [INTERVIEW_PREP.md](./INTERVIEW_PREP.md)
